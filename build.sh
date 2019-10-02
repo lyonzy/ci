@@ -30,7 +30,12 @@ build_firmware() {
   lunch lineage_hammerhead-userdebug
   #mka bacon
   timeout 2h make -j32 bacon
-  printf 'return code was %d\n' $?
+  retVal=$?
+  if [ $retVal -eq 124 ]; then
+    echo "Timed out, saving cache"
+    (exit 0)
+  fi
+  
   cd ..
 }
 
