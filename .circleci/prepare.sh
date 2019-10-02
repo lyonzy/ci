@@ -39,4 +39,4 @@ git config --global color.ui auto
 git config --global log.date iso
 
 # ccache
-ccache -M 30G
+ccache -M 50G
