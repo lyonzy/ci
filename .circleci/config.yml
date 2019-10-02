@@ -18,9 +18,9 @@ jobs:
           name: Run build
           command: ./build.sh
           no_output_timeout: 60m
-      - run:
-          name: Deploy
-          command: ./deploy.sh
+      #- run:
+      #    name: Deploy
+      #    command: ./deploy.sh
       - save_cache:
           key: cm-14.1-201908
           paths:
