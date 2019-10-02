@@ -29,8 +29,8 @@ build_firmware() {
   source build/envsetup.sh
   lunch lineage_hammerhead-userdebug
   #mka bacon
-  make -j32 bacon
-
+  timeout 2h make -j32 bacon
+  printf 'return code was %d\n' $?
   cd ..
 }
 
