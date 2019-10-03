@@ -22,7 +22,7 @@ jobs:
       #    name: Deploy
       #    command: ./deploy.sh
       - save_cache:
-          key: cm-14.1-201908
+          key: cm-14.1-201908-{{ epoch }}
           paths:
             - ~/.ccache
       - store_artifacts:
